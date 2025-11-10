@@ -4,17 +4,7 @@
 
 *Revolutionizing Agriculture with Computer Vision*
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blu```
-Field-Vision/
-├── 📄 README.md                 # Project documentation
-├── 📓 Weed_Detection.ipynb     # Training pipeline notebook
-├── 📓 results.ipynb            # Results and evaluation
-├── 🤖 model_mean_teacher.pt    # Trained model weights
-├── � requirements.txt         # Python dependencies
-└── �📁 images/                  # Result visualizations
-    └── 🖼️ detection_results.jpg
-```/                  # Result visualizations
-│   └── 🖼️ detection_results.jpg)](https://python.org)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org)
 [![YOLO](https://img.shields.io/badge/YOLO-v11-green.svg)](https://github.com/ultralytics/ultralytics)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -45,7 +35,7 @@ Field-Vision/
 - **mAP50-95**: Comprehensive evaluation across IoU thresholds
 - **F1-Score**: Balanced performance metric
 
-## � Model Results & Performance
+## 📊 Model Results & Performance
 
 ### 🎯 Detection Performance
 Our Field Vision model achieves exceptional performance in distinguishing crops from weeds:
@@ -80,7 +70,7 @@ Progressive improvement through advanced techniques:
 - **False Positive Rate**: < 8%
 - **False Negative Rate**: < 12%
 
-## � Dataset
+## 📊 Dataset
 
 This project uses the **Weed Detection Dataset** available on Kaggle:
 
@@ -105,7 +95,7 @@ weed-detection-dataset/
 └── unlabeled/           # Unlabeled images for semi-supervised learning
 ```
 
-## �🚀 Quick Start
+## 🚀 Quick Start
 
 ### Prerequisites
 - Python 3.8 or higher
@@ -148,13 +138,27 @@ import cv2
 model = YOLO('model_mean_teacher.pt')
 
 # Run inference
-results = model('test.png')
+results = model('path/to/your/image.jpg')
 
 # Display results
 results[0].show()
 ```
 
+#### 📁 Batch Processing
+```python
+# Process multiple images
+results = model(['image1.jpg', 'image2.jpg', 'image3.jpg'])
 
+for i, result in enumerate(results):
+    result.save(f'result_{i}.jpg')
+```
+
+#### 🎥 Real-time Detection
+```python
+# For webcam or video file
+model.predict(source=0, show=True)  # Webcam
+model.predict(source='video.mp4', show=True)  # Video file
+```
 
 ## 📚 Notebooks
 
@@ -249,9 +253,6 @@ We welcome contributions! Please follow these steps:
 - [ ] Cloud-based processing
 - [ ] Real-time GPS mapping
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 
