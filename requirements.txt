@@ -1,0 +1,18 @@
+# Core ML and Computer Vision libraries
+ultralytics
+torch
+torchvision
+opencv-python
+numpy
+Pillow
+
+# Data augmentation
+albumentations
+
+# Visualization and plotting
+matplotlib
+
+# Data formatting and tables
+tabulate
+
+
