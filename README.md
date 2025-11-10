@@ -59,7 +59,7 @@ Progressive improvement through advanced techniques:
 
 ### 🖼️ Visual Detection Results
 
-![Detection Results](images/detection_results.jpg)
+![Detection Results](test.png)
 
 *Real-world field images showing accurate crop (green boxes) and weed (red boxes) detection*
 
